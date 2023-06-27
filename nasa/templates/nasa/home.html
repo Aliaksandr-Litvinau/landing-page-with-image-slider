@@ -1,0 +1,209 @@
+{% load static %} <!-- загружаем папку статик -->
+{% load thumbnail %}
+
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'nasa/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Подключаем стили css для слайдера Slick -->
+    <link rel="stylesheet" type="text/css" href="{% static 'nasa/slick.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'nasa/slick-theme.css' %}"/>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="{% static 'nasa/nasa-6-logo-svgrepo-com.svg' %}">
+    <title>Home</title>
+</head>
+
+
+<body>
+
+<!-- Шапка -->
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+
+        <div class="col-lg-1 col-md-2 col-sm-2 col-3 align-self-center">
+            <button class="navbar-toggler text-center"
+                    type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03"
+                    aria-controls="navbarTogglerDemo03"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <div class="col-lg-2 col-md-8 col-sm-5 col-7 align-self-center">
+            <a class="navbar-brand" href='#'>
+                <img src="{% static 'nasa/Vector.png' %}" class="d-inline-block align-top">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse col-lg-7"
+             id="navbarTogglerDemo03">
+            <div class="navbar-nav text1 text-center col-lg-7">
+                <a class="nav-link col-lg-6 align-self-center" href="#">преимущества </a>
+                <a class="nav-link col-lg-6 align-self-center" href="#">фотографии</a>
+                <a class="nav-link col-lg-6 align-self-center" href="#">контакты</a>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-2 col-2 align-self-center">
+            <button class="btn btn-danger me-5 btn1_stl" type="button">вход</button>
+        </div>
+    </nav>
+
+
+    <div class="frame_t1_t2">
+        <div class="text2">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 col-md-12 col-sm-6 col-12 text-center text-break"> Космическое агенство</div>
+            </div>
+        </div>
+        <div class="text2_2 col-lg-6 col-md-12 col-sm-6 col-12 text-center"> Национальное управление по аэронавтике и
+            исследованию космического
+            пространства — ведомство, относящееся к федеральному правительству США и подчиняющееся непосредственно
+            президенту США.
+        </div>
+    </div>
+
+    <!-- Первый блок -->
+    <div class="container-fluid text-center my-5"> <!--my-5 - отступ по оси y-->
+        <div class="row">
+            <div class="col-md-6 align-self-center">
+
+                <div class="row col-md-12 p-5 gx-3 justify-content-around">
+                    <div class="col-md-4 justify-content-end">
+                        <img src="{% static 'nasa/fa6-solid_shuttle-space.png' %}" class="d-inline-block">
+                        <div class="row-md-3 py-3 text3"> Спейс шаттлы —пилотируемые корабли</div>
+                    </div>
+                    <div class="col-md-4 justify-content-end">
+                        <img src="{% static 'nasa/ion_telescope.png' %}" class="d-inline-block align-top">
+                        <div class="row-md-3 py-3 text3">Лучшее телескопическое оборудование</div>
+                    </div>
+                </div>
+
+
+                <div class="row col-md-12 p-5 gx-3 justify-content-around">
+                    <div class="col-md-3">
+                        <img src="{% static 'nasa/Group.png' %}" class="d-inline-block align-top">
+                        <div class="row-md-1 py-3 text3">Целимся на Луну и Марс</div>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="{% static 'nasa/bxs_medal.png' %}" class="d-inline-block align-top">
+                        <div class="row-md-3 py-3 text3">Золотая медаль по научным исследованиям</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 align-self-center">
+                <img src="{% static 'nasa/foto.png' %}" class="img-fluid d-inline-block align-top">
+            </div>
+        </div>
+    </div>
+
+    <!-- Блок слайдера -->
+    {% if imgs %}
+    <div class="container-fluid">
+        <div class="bg-image "
+             style="background-image: url({% static 'nasa/background_3.svg' %});
+                                height:892px;
+                                margin-bottom: 50;
+                                padding-top: 0%;
+                                padding-bottom: 0%;
+                                background-position: center;
+                                background-size: cover;">
+
+            <div class="container-fluid">
+                <div class="foto_text d-flex justify-content-center align-items-center">
+                    <div class="row">
+                        Фотографии
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Большое изображение слика -->
+            <div class="container-fluid pt-3">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-11 align-self-center">
+                        <div class="slider_for align-self-center">
+                            {% for img in imgs %}
+                            {% for im in img.images %}
+                            <div class="slider__item d-flex justify-content-center">
+                                <img src="{{ im }}" width="40%" class="img-fluid rounded-5 " alt="">
+                            </div>
+                            {% endfor %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карусель маленьких изображений слика -->
+            <div class="d-flex align-self-end">
+                <div class="container-fluid p-4">
+                    <div class="slick_row d-flex justify-content-center align-items-center">
+                        <div class="col-lg-10 col-sm-10">
+                            <div class="row">
+                                <div class="arrow_prev col-1 d-flex align-items-center">
+                                    <img src="{% static 'nasa/prevArrow.svg' %}" class="img-fluid" alt="">
+                                </div>
+                                <div class="slider col-10">
+                                    {% for img in imgs %}
+                                    {% for im in img.images %}
+                                    <div class="slider__item">
+                                        <img class="img12" src="{{ im }}" class="img-fluid rounded-5 " alt=""
+                                             style="max-height: 80px;">
+                                    </div>
+                                    {% endfor %}
+                                    {% endfor %}
+                                </div>
+                                <div class="arrow_next col-1 d-flex align-items-center">
+                                    <img src="{% static 'nasa/nextArrow.svg' %}" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    {% endif %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Подключаем jQuery -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- Подключаем слайдер Slick -->
+    <script type="text/javascript" src="{% static 'nasa/slick.min.js' %}"></script>
+    <!-- Подключаем файл скриптов настройки Slick -->
+    <script type="text/javascript" src="{% static 'nasa/script.js' %}"></script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,380 @@
+{% load static %} <!-- загружаем папку статик -->
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text1
+{
+    width: 158px;
+    height: 20px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.frame_t1_t2
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.text2
+{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 68px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin-top: 126px;
+    text-align: center;
+
+
+}
+
+.text2_2
+{
+    margin-left: auto;
+    margin-right: auto;
+    /* Текст */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    /* or 167% */
+    text-align: center;
+    letter-spacing: 0.02em;
+    /* Серый */
+    color: #3C3C3C;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.text3
+{
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 26px;
+/* or 186% */
+
+letter-spacing: 0.02em;
+/* Чёрный */
+color: #0A121E;
+}
+
+
+
+.block_picture_1_1
+{
+    display: inline-block;
+    absolute
+
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+
+    width: 263px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.block_picture_1_2
+{
+    display: inline-block;
+    position: static;
+
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+
+    width: 263px;
+    height: 200px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.block_picture_2_1
+{
+    display: inline-block;
+    position: static;
+
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+
+    width: 263px;
+    height: 200px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.block_picture_2_2
+{
+    display: inline-block;
+    position: real;
+
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+
+    width: 263px;
+    height: 200px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.background_png
+{
+
+     background: url("/static/nasa/background_3.svg");
+     color: white;
+     height:892px;
+     padding: 100px 0 0 0;
+     background-size: cover;
+     background-position: center center;
+}
+
+.sadasd
+{
+    background-image: url({% static 'nasa/background_3.svg' %});
+     background-image: url("/static/nasa/background_3.svg");
+}
+
+.slick_row
+{
+    position: static;
+    height: 199px;
+}
+
+.foto_text
+{
+    position: static;
+    height: 199px;
+
+    /* h2 */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 52px;
+    /* identical to box height, or 124% */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.small_slick
+{
+
+    width: 50px;
+    height: 50px;
+    object-fit: none;
+
+}
+
+.container11
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+}
+
+.img12
+{
+    max-width: 130px;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border-radius: 2rem;
+
+}
+
+
+
+
+.arrow_prev,
+ {
+  height: 10%;
+  width: 10%;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+
+.contacts
+{
+    /* h2 */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 52px;
+    /* identical to box height, or 124% */
+    letter-spacing: 0.02em;
+    /* Чёрный */
+    color: #0A121E;
+}
+
+.contacts2
+{
+    /* h3 */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 26px;
+    /* identical to box height, or 186% */
+    letter-spacing: 0.02em;
+    /* Чёрный */
+    color: #0A121E;
+}
+
+.contacts3
+{
+    /* Текст мелкий */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    /* identical to box height, or 200% */
+    letter-spacing: 0.02em;
+    /* Серый */
+    color: #3C3C3C;
+}
+
+.contacts_link
+{
+    width: 77px;
+    height: 30px;
+    /* Текст мелкий */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    /* identical to box height, or 200% */
+    letter-spacing: 0.02em;
+    /* Голубой */
+    color: #004382;
+}
+
+.tel_you
+{
+    gap: 15px;
+    width: 63px;
+    height: 24px;
+}
+
+.question
+{
+    width: 555px;
+    height: 26px;
+    /* h4 */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    /* identical to box height, or 130% */
+    letter-spacing: 0.02em;
+    /* Чёрный */
+    color: #0A121E;
+}
+
+.question2
+{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    /* or 200% */
+    letter-spacing: 0.02em;
+    /* Серый */
+    color: #3C3C3C;
+}
+
+.form2
+{
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 30px;
+/* identical to box height, or 200% */
+letter-spacing: 0.02em;
+/* Серый */
+color: #3C3C3C;
+}
+
+.btn1_stl
+{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.footer
+{
+    background-color: #0A121E;
+}
+
+.footer_t
+{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    /* identical to box height, or 200% */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+
+

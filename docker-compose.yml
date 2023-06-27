@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  web:
+    restart: always
+    build: .
+    command: sh -c "python /usr/src/nasa/manage.py migrate && python /usr/src/nasa/manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/usr/src/nasa
+    ports:
+      - 8000:8000
+    depends_on:
+      - mysql
+    env_file:
+      - .env
+
+
+  mysql:
+    image: mysql:latest
+    restart: always
+    environment:
+      - MYSQL_DATABASE=your_database_name
+      - MYSQL_USER=your_mysql_username
+      - MYSQL_PASSWORD=your_mysql_password
+      - MYSQL_ROOT_PASSWORD=your_mysql_root_password
+    ports:
+      - 3306:3306
